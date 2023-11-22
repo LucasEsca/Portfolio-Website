@@ -5,10 +5,6 @@
   --gray-color: #ccc;
 }
 
-li a{
-  text-decoration: none;
-}
-
 /* Changing background color */
 body {
   background: var(--bg-color) !important;
@@ -241,11 +237,9 @@ body {
   transform: translateY(-110px) rotateX(90deg);
 }
 
-/*
-#portfolio img {
-  height: 300px;
-  object-fit: cover;
-}*/
+#skills p{
+  color: whitesmoke;
+}
 .card-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -332,40 +326,54 @@ body {
   position: relative;
 }
 
-/* Timeline background line */
-#about .img::before {
-  content: "";
-  left: 50%;
-  width: 4px;
-  position: absolute;
-  height: calc(100% + 140px);
-  background: var(--gray-color);
+/* About */
+#about .cont{
+  margin: 2%;
+  padding: 2.5%;
+  backdrop-filter: blur(50px);
+  @media only screen and (max-width: 991px) {
+      position: relative;
+  }
+}
+#about #title{
+font-size:6vh;
+font-weight: bold;
+color: transparent;
+-webkit-text-stroke: 2px rgb(0, 0, 0);
+
 }
 
-#about img,
-#about .hire-text h2 {
-  width: 140px;
+#about #description{
+font-size: 3.5vh;
 }
 
-#about .hire-text h2 {
-  height: 140px;
+#about h1, p{
+  color: rgb(0, 0, 0);
 }
 
-.social-icons a {
-  width: 40px;
-  height: 40px;
+#about .shape-outer {
+  display: flex;
+  flex-shrink: 0;
+  height: calc(150px + 24vw);
+  width: calc(150px + 24vw);
+  margin: 25px;
+  background-image: linear-gradient(to bottom right, #ff1867, #4158d0, rgb(231, 255, 19));
 }
 
-footer .social-icons a {
-  width: 30px;
-  height: 30px;
+#about .shape-inner {	
+  height: calc(130px + 24vw);
+  width: calc(130px + 24vw);
+  background: url("../images/WhatsApp Image 2023-05-15 at 09.11.35.jpeg") no-repeat center;
+  background-size: cover;
+  margin: auto;
 }
 
-#cv img {
-  width: 230px;
+#about .rabbet {
+-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 }
 
-/* Contact section background image */
+/* Contact section background image
 #contact {
   background-size: cover;
   background-attachment: fixed;
@@ -405,7 +413,7 @@ footer .social-icons a {
   left: 0;
   height: inherit;
   width: inherit;
-  /* background: #d35400; */
+  /* background: #d35400; 
   border-radius: 50%;
   transform: scale(.9);
   z-index: -1;
@@ -429,7 +437,7 @@ footer .social-icons a {
 #contact ul li:hover:before{
   filter: blur(3px);
   transform: scale(1.2);
-  /* box-shadow: 0 0 15px #d35400; */
+  /* box-shadow: 0 0 15px #d35400; 
 }
 #contact ul li:nth-child(1):hover:before{
   box-shadow: 0 0 15px #4267B2;
@@ -470,7 +478,7 @@ footer .social-icons a {
   color: #ff1a1a;
   box-shadow: 0 0 15px #ff0000;
   text-shadow: 0 0 15px #ff0000;
-}
+}*/
 
 @media screen and (max-width: 990px) {
   #skills .card {
@@ -483,4 +491,16 @@ footer .social-icons a {
   #portfolio .card-wrapper {
     width: 100% !important;
   }
+}
+
+footer{
+  background-color: #171515;
+}
+
+footer p{
+  color: whitesmoke;
+}
+
+.social-icons a{
+  background-color: blue;
 }
